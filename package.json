@@ -1,0 +1,30 @@
+{
+  "name": "drips",
+  "version": "0.0.0",
+  "main": "index.js",
+  "description": "",
+  "keywords": [
+    "drips",
+    "vue",
+    "vue ui",
+    "vue-components",
+    "web-components",
+    "component",
+    "components",
+    "mobile ui",
+    "framework",
+    "frontend"
+  ],
+  "author": "shuidifed <fed@shuidihuzhu.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shuidi-fed/drips"
+  },
+  "license": "MIT",
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
