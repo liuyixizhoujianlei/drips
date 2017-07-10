@@ -1,6 +1,6 @@
 import Alert from './src/components/alert'
 
-export {
+export default {
   Alert
 }
 
