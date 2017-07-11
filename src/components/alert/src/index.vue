@@ -5,7 +5,7 @@
 </template>
 <script>
   export default {
-    name: 'DRAlert',
+    name: 'DrAlert',
     data() {
       return {}
     }
