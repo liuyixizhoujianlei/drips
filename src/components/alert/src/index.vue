@@ -1,7 +1,6 @@
 <template>
   <div>
-    <a href="#">test</a>
-    alertttttt
+    alert
   </div>
 </template>
 <script>
