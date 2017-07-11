@@ -1,11 +1,12 @@
 <template>
   <div>
-    alert
+    <a href="#">test</a>
+    alertttttt
   </div>
 </template>
 <script>
   export default {
-    name: 'DRAlert',
+    name: 'DrAlert',
     data() {
       return {}
     }

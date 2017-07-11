@@ -1,5 +1,7 @@
 <template>
-  <div>alert</div>
+  <div>
+    <dr-alert></dr-alert>
+  </div>
 </template>
 <script>
 </script>
