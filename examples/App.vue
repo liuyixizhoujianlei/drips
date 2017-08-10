@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    在在在在测试
     <transition name="fade">
       <router-view/>
     </transition>
@@ -11,4 +10,5 @@
 </script>
 
 <style lang="less">
+  @import './styles.less';
 </style>
