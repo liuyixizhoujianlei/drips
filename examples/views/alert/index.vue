@@ -6,16 +6,11 @@
   </div>
 </template>
 <script>
-import { Alert } from 'drips'
-
 export default {
   data() {
     return {
       isShowAlert: false
     }
-  },
-  components: {
-    Alert
   },
   methods: {
     showComponentAlert() {
@@ -33,7 +28,5 @@ export default {
 }
 </script>
 <style lang="less">
-  .warp{
-  }
 </style>
 

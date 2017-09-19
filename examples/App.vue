@@ -10,5 +10,10 @@
 </script>
 
 <style lang="less">
+  @import '../src/styles/reset.less';
+  @import '../src/styles/index.less';
   @import './styles.less';
+  body{
+    background: @theme-main-color;
+  }
 </style>
