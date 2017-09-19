@@ -9,7 +9,7 @@ function resolve (dir) {
 
 let webpackConfig = {
   entry: {
-    app: './demo/main.js'
+    app: './examples/main.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -22,13 +22,13 @@ let webpackConfig = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.common.js',
-      'assets': path.resolve(__dirname, '../demo/assets/'),
+      'assets': path.resolve(__dirname, '../examples/assets/'),
       'drips': path.resolve(__dirname, '../'),
-      'components': path.resolve(__dirname, '../demo/components/'),
-      'router': path.resolve(__dirname, '../demo/router/'),
-      'store': path.resolve(__dirname, '../demo/store/'),
-      'views': path.resolve(__dirname, '../demo/views/'),
-      'utils': path.resolve(__dirname, '../demo/utils/')
+      'components': path.resolve(__dirname, '../examples/components/'),
+      'router': path.resolve(__dirname, '../examples/router/'),
+      'store': path.resolve(__dirname, '../examples/store/'),
+      'views': path.resolve(__dirname, '../examples/views/'),
+      'utils': path.resolve(__dirname, '../examples/utils/')
     }
   },
   module: {
@@ -37,7 +37,7 @@ let webpackConfig = {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [resolve('demo'), resolve('test')],
+        include: [resolve('examples'), resolve('test')],
         options: {
           formatter: require('eslint-friendly-formatter')
         }
@@ -50,7 +50,7 @@ let webpackConfig = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('demo'), resolve('test')]
+        include: [resolve('examples'), resolve('test')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

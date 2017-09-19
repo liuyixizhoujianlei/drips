@@ -1,0 +1,33 @@
+.dr-fade-enter-active,.dr-fade-leave-active {
+  opacity: 1;
+  transition: opacity linear 0.2s;
+}
+
+.dr-fade-enter, .dr-fade-leave-to {
+  opacity: 0;
+}
+
+.dr-dialog-enter-active, .dr-dialog-leave-active {
+  opacity: 1;
+  transition-duration: 400ms;
+  transform: translate(-50%, -50%) scale(1)!important;
+  transition-property: transform, opacity!important;
+}
+.dr-dialog-leave-active {
+  transition-duration: 300ms;
+}
+.dr-dialog-enter {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.185)!important;
+}
+.dr-dialog-leave-active {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.85)!important;
+}
+
+.dr-mask-enter, .dr-mask-leave-active {
+  opacity: 0;
+}
+.dr-mask-leave-active, .dr-mask-enter-active {
+  transition: opacity 300ms;
+}

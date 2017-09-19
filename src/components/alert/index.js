@@ -5,4 +5,3 @@ Alert.install = function(Vue) {
 }
 
 export default Alert
-

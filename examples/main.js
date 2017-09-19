@@ -1,12 +1,10 @@
 import 'babel-polyfill'
-import { Alert } from 'drips'
 import App from './App'
 import router from './router'
+import { AlertPlugin, Rules } from 'drips'
 
-require('drips/src/styles/reset.less')
-require('drips/src/styles/index.less')
-
-Vue.use(Alert)
+Vue.use(AlertPlugin)
+Vue.use(Rules)
 
 new Vue({
   el: '#app',
