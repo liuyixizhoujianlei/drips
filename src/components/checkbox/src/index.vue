@@ -76,6 +76,7 @@ export default {
       this.options.forEach((item)=>{
         item.val = bok
       })
+
     }
   }
 }
