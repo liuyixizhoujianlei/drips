@@ -4,7 +4,7 @@ import Loading from './src/components/loading'
 import SdButton from './src/components/button'
 import Preview from './src/components/preview'
 import CheckBox from './src/components/checkbox'
-import Checkbox from './src/components/checkbox'
+
 
 
 // plugin
