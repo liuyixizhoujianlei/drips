@@ -13,6 +13,7 @@
   @import '../src/styles/reset.less';
   @import '../src/styles/index.less';
   @import './styles.less';
+  @import '../src/icomoon/style.css';
   body{
     background: @theme-main-color;
   }

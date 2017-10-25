@@ -16,5 +16,14 @@ export default [
     component: (resolve) => {
       require(['views/xDialog'], resolve)
     }
+  },
+  {
+    path: '/icomoon',
+    meta: {
+      title: '图标字体'
+    },
+    component: (resolve) => {
+      require(['views/icomoonDemo'], resolve)
+    }
   }
 ]
