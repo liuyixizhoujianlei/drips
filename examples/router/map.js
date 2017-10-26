@@ -16,5 +16,14 @@ export default [
     component: (resolve) => {
       require(['views/xDialog'], resolve)
     }
+  },
+  {
+    path: '/button',
+    meta: {
+      title: '按钮'
+    },
+    component: (resolve) => {
+      require(['views/button'], resolve)
+    }
   }
 ]
