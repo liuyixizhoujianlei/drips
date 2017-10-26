@@ -16,5 +16,14 @@ export default [
     component: (resolve) => {
       require(['views/xDialog'], resolve)
     }
+  },
+  {
+    path: '/loading',
+    meta: {
+      title: '加载'
+    },
+    component: (resolve) => {
+      require(['views/loading'], resolve)
+    }
   }
 ]
