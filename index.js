@@ -12,8 +12,7 @@ import TransferDom from './src/directives/transfer-dom'
 
 export {
   XDialog,
-  Rules,
-  SdButton
+  SdButton,
   Preview,
   Rules,
   AlertPlugin,

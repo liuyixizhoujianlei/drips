@@ -18,12 +18,13 @@ export default [
     }
   },
   {
-    path: '/button',
+    path: '/components/button',
     meta: {
       title: '按钮'
     },
     component: (resolve) => {
       require(['views/button'], resolve)
+    }
   },
   {
     path: '/components/preview',
