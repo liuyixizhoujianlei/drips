@@ -1,6 +1,6 @@
 export default [
   {
-    path: '/alert',
+    path: '/components/alert',
     meta: {
       title: '弹窗'
     },
@@ -9,7 +9,7 @@ export default [
     }
   },
   {
-    path: '/x-dialog',
+    path: '/components/x-dialog',
     meta: {
       title: '弹窗'
     },
@@ -24,6 +24,23 @@ export default [
     },
     component: (resolve) => {
       require(['views/button'], resolve)
+  },
+  {
+    path: '/components/preview',
+    meta: {
+      title: 'preview'
+    },
+    component: (resolve) => {
+      require(['views/preview'], resolve)
+    }
+  },
+  {
+    path: '/directives/transfer-dom',
+    meta: {
+      title: 'v-transfer-dom'
+    },
+    component: (resolve) => {
+      require(['views/transferDom'], resolve)
     }
   }
 ]
