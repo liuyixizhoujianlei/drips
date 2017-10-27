@@ -43,5 +43,14 @@ export default [
     component: (resolve) => {
       require(['views/transferDom'], resolve)
     }
+  },
+  {
+    path: '/checkbox',
+    meta: {
+      title: '复选'
+    },
+    component: (resolve) => {
+      require(['views/checkbox'], resolve)
+    }
   }
 ]
