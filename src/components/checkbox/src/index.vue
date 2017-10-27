@@ -50,8 +50,13 @@ export default {
         console.log('不可选状态')
         return
       }
-      if(this.max && this.getSelectNum()>=this.max && !selectitem.val){
-        console.log('不可超过设置的max值')
+      if(this.max && this.max === 1 && this.getSelectNum()>=this.max && !selectitem.val){
+        this.setOption(false)
+        console.log('不可超过设置的max值，max=1时，单选使用')
+        // return
+      }
+      if(this.max && this.max > 1 && this.getSelectNum()>=this.max && !selectitem.val){
+        console.log('不可超过设置的max值，max>1时')
         return
       }
       if(this.min && this.getSelectNum()<=this.min && selectitem.val){
@@ -62,12 +67,15 @@ export default {
       this.onChecked(selectitem)
     },
     getSelectNum() {
-      console.log(this.options.filter((item)=>{return item.val}))
       let num = this.options.filter((item)=>{
         return item.val
       }).length
-      console.log(num)
       return num
+    },
+    setOption(bok){
+      this.options.forEach((item)=>{
+        item.val = bok
+      })
     }
   }
 }

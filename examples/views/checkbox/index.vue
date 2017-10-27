@@ -15,7 +15,7 @@
     <check-box
       title="您想要的title"
       :options="checkBoxOptions"
-      :max="4"
+      :max="1"
       :min="1"
       :disabled="false"
     ></check-box>
