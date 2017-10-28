@@ -4,7 +4,10 @@
     <x-dialog v-model="isShowDialog">
       <div class="test">
         这是一个自定义的弹窗
-        <button @click="isShowDialog = false">X</button>
+        <div class="buttons">
+          <sd-button class="aa" :clickEvent="hideComponentAlert" buttonText="取消" size="small"></sd-button>
+          <sd-button class="bb" :clickEvent="hideComponentAlert" buttonText="确定" type="yellow" size="small"></sd-button>
+        </div>
       </div>
     </x-dialog>
   </div>
@@ -24,8 +27,19 @@ export default {
   methods: {
     showComponentAlert() {
       this.isShowDialog = true
+    },
+    hideComponentAlert() {
+      this.isShowDialog = false
     }
   }
 }
 </script>
-
+<style>
+  .buttons {
+    display: flex;
+  }
+  .aa, .bb {
+    flex: 1;
+    margin: 10px 10px;
+  }
+</style>
