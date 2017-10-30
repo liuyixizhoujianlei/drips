@@ -97,7 +97,7 @@
     "postcss-px2rem-dpr": "^0.3.2",
     "px2rem-loader": "^0.1.7",
     "rimraf": "^2.6.0",
-    "sd-track-event": "^0.1.11",
+    "sd-photoswipe": "0.0.2",
     "selenium-server": "^3.0.1",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
