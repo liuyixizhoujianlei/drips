@@ -18,7 +18,7 @@ export default [
     }
   },
   {
-    path: '/loading',
+    path: '/components/loading',
     meta: {
       title: '加载'
     },

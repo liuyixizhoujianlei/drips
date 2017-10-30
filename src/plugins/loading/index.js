@@ -5,8 +5,8 @@ let $vm
 const plugin = {
   install (Vue) {
     if (!$vm) {
-      const Alert = Vue.extend(loadingComponent)
-      $vm = new Alert({
+      const Loading = Vue.extend(loadingComponent)
+      $vm = new Loading({
         el: document.createElement('div')
       })
       document.body.appendChild($vm.$el)
