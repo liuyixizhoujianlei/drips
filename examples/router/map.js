@@ -18,21 +18,12 @@ export default [
     }
   },
   {
-    path: '/confirm',
+    path: '/components/confirm',
     meta: {
       title: '对话框'
     },
     component: (resolve) => {
       require(['views/confirm'], resolve)
-    }
-  },
-  {
-    path: '/toast',
-    meta: {
-      title: '对话框'
-    },
-    component: (resolve) => {
-      require(['views/toast'], resolve)
     }
   },
   {

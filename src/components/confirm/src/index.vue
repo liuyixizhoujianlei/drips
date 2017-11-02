@@ -1,166 +1,143 @@
-<style lang="less" scoped>
-  .overlay {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 101;
-    opacity: 1;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity .3s;
-  }
-
-  .fade-enter,
-  .fade-leave {
-    opacity: 1;
-  }
-
-  .dialog {
-    width: 85%;
-    max-width: 750/2px;
-    flex-direction: column;
-    border-radius: 6/2px;
-    background-color: #fff;
-    overflow: hidden;
-  }
-
-  .dialog .title {
-    padding: 45/2px 22/2px 18/2px;
-    font-size: 38/2px;
-    line-height: 65/2px;
-    text-align: center;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
-
-  .dialog .title strong {
-    font-weight: 400;
-  }
-
-  .dialog .info {
-    padding: 0 22/2px;
-    color: #888;
-    font-size: 34/2px;
-    line-height: 55/2px;
-    text-align: center;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
-
-  .div-bottom {
-    display: -webkit-flex;
-    display: flex;
-  }
-
-  .div-bottom a {
-    display: block;
-    -webkit-flex: 1;
-    flex: 1;
-    margin-top: 22/2px;
-    height: 100/2px;
-    color: #ff8400;
-    font-size: 35/2px;
-    line-height: 100/2px;
-    text-align: center;
-    border-top: 1px solid #d5d5d6;
-  }
-
-  .dialog a.cancel {
-    color: #888;
-    border-right: 1px solid #d5d5d6;
-  }
-
-  .dialog-enter-active, .dialog-leave-active {
-    opacity: 1;
-    transform: scale(1);
-    transition: transform .4s, opacity .4s;
-  }
-
-  .dialog-enter, .dialog-leave {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-
-</style>
-
 <template>
-  <div class="confirm">
-    <transition name="dialog" mode="in-out" v-model="showValue">
-      <div class="overlay" v-show="showValue">
-        <div class="dialog" v-show="showValue">
-          <p class="title">
-            <strong>{{title}}</strong>
-          </p>
-          <p v-html="content" class="info"></p>
-          <div class="div-bottom">
-            <a href="javascript:;" class="cancel" @click="onHide(false)">{{negative}}</a>
-            <a href="javascript:;" @click="onHide(true)">{{positive}}</a>
-          </div>
-        </div>
+  <div>
+    <x-dialog
+    v-model="showValue"
+    :dialogClass="theme === 'android' ? 'weui-dialog weui-skin_android' : 'weui-dialog'"
+    :mask-transition="maskTransition"
+    :dialog-transition="theme === 'android' ? 'vux-fade' : dialogTransition"
+    :hide-on-blur="hideOnBlur"
+    :mask-z-index="maskZIndex"
+    @on-hide="$emit('on-hide')">
+      <div class="weui-dialog__hd" v-if="!!title">
+        <strong class="weui-dialog__title">{{ title }}</strong>
       </div>
-    </transition>
+      <div class="weui-dialog__bd" v-if="!showInput">
+        <slot><div v-html="content"></div></slot>
+      </div>
+      <div v-else class="vux-prompt">
+        <input class="vux-prompt-msgbox" v-bind="inputAttrs" v-model="msg" :placeholder="placeholder" ref="input"/>
+      </div>
+      <div class="weui-dialog__ft">
+        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" @click="_onCancel">{{cancelText}}</a>
+        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" @click="_onConfirm">{{confirmText}}</a>
+      </div>
+    </x-dialog>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'confirm',
-    data () {
-      return {
-        showValue: false
-      }
+import XDialog from '../../x-dialog'
+export default {
+  name: 'confirm',
+  components: {
+    XDialog
+  },
+  props: {
+    value: {
+      type: Boolean,
+      default: false
     },
-    props: {
-      visible: {
-        type: Boolean,
-        twoWay: true
-      },
-      onPositive: {
-        type: Function,
-        default: function () {
-        }
-      },
-      title: {
-        type: String
-      },
-      content: {
-        type: String
-      },
-      positive: {
-        type: String,
-        default: '确定'
-      },
-      negative: {
-        type: String,
-        default: '取消'
-      }
+    showInput: {
+      type: Boolean,
+      default: false
     },
-    methods: {
-      onHide(isPositive) {
-        if (isPositive && this.onPositive) {
-          this.onPositive()
-        }
-        this.showValue = !this.showValue
-      }
+    placeholder: {
+      type: String,
+      default: ''
     },
-    watch: {
-      visible (val) {
-        this.showValue = val
-        if (val) {
+    theme: {
+      type: String,
+      default: 'ios'
+    },
+    hideOnBlur: {
+      type: Boolean,
+      default: false
+    },
+    title: String,
+    confirmText: String,
+    cancelText: String,
+    maskTransition: {
+      type: String,
+      default: 'vux-fade'
+    },
+    maskZIndex: [Number, String],
+    dialogTransition: {
+      type: String,
+      default: 'vux-dialog'
+    },
+    content: String,
+    closeOnConfirm: {
+      type: Boolean,
+      default: true
+    },
+    inputAttrs: Object
+  },
+  created () {
+    this.showValue = this.show
+    if (this.value) {
+      this.showValue = this.value
+    }
+  },
+  watch: {
+    value (val) {
+      this.showValue = val
+    },
+    showValue (val) {
+      this.$emit('input', val)
+      if (val) {
+        if (this.showInput) {
+          this.msg = ''
           setTimeout(() => {
-            this.$el.style.opacity = 1
-          })
-        } else {
-          this.$el.style.opacity = 0
+            if (this.$refs.input) {
+              this.$refs.input.focus()
+            }
+          }, 300)
         }
-      },
-      showValue (val) {
-        this.$emit('input', val)
+        this.$emit('on-show') // emit just after msg is cleared
       }
     }
+  },
+  data () {
+    return {
+      msg: '',
+      showValue: false
+    }
+  },
+  methods: {
+    setInputValue (val) {
+      this.msg = val
+    },
+    _onConfirm () {
+      if (!this.showValue) {
+        return
+      }
+      if (this.closeOnConfirm) {
+        this.showValue = false
+      }
+      this.$emit('on-confirm', this.msg)
+    },
+    _onCancel () {
+      if (!this.showValue) {
+        return
+      }
+      this.showValue = false
+      this.$emit('on-cancel')
+    }
   }
+}
 </script>
+
+<style lang="less">
+.vux-prompt {
+  padding-bottom: 1.6em;
+}
+.vux-prompt-msgbox {
+  width: 80%;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 4px 5px;
+  appearance: none;
+  outline: none;
+  font-size: 16px;
+}
+</style>

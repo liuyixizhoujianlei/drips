@@ -2,12 +2,7 @@
   <div class="warp">
     <button @click="showComponentConfirm">自定义弹窗{{isShowDialog}}</button>
     <button @click="showPluginConfirm">点击插件式弹出</button>
-    <Confirm v-model="isShowDialog" :title="title" :content="content" :visible="isShowDialog">
-<!--       <div class="test">
-        这是一个自定义的弹窗
-        <button @click="isShowDialog = false">X</button>
-      </div> -->
-    </Confirm>
+    <Confirm v-model="isShowDialog" :title="title" :content="content" :confirm-text="'确定哟'" :cancel-text="'取消哟'"></Confirm>
   </div>
 </template>
 <script>
@@ -31,7 +26,9 @@ export default {
     showPluginConfirm() {
       this.$drips.confirm.show({
         title: '这是一个title',
-        content: '这是一些内容'
+        content: '这是一些内容',
+        confirmText: '确认哟',
+        cancelText: '取消哟'
       })
     }
   }
