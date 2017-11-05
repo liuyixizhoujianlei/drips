@@ -24,5 +24,5 @@ export {
   Rules,
   AlertPlugin,
   TransferDom,
-  Checkbox
+  CheckBox
 }
