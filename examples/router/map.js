@@ -18,6 +18,24 @@ export default [
     }
   },
   {
+    path: '/components/loading',
+    meta: {
+      title: '加载'
+    },
+    component: (resolve) => {
+      require(['views/loading'], resolve)
+    }
+  },
+  {
+    path: '/components/button',
+    meta: {
+      title: '按钮'
+    },
+    component: (resolve) => {
+      require(['views/button'], resolve)
+    }
+  },
+  {
     path: '/components/preview',
     meta: {
       title: 'preview'
@@ -42,6 +60,15 @@ export default [
     },
     component: (resolve) => {
       require(['views/icomoonDemo'], resolve)
+    }
+  },
+  {
+    path: '/checkbox',
+    meta: {
+      title: '复选'
+    },
+    component: (resolve) => {
+      require(['views/checkbox'], resolve)
     }
   }
 ]
