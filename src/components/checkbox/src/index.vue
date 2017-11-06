@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'checkBox',
+  name: 'CheckBox',
   props: {
     title: {
       type: String,
@@ -76,6 +76,7 @@ export default {
       this.options.forEach((item)=>{
         item.val = bok
       })
+
     }
   }
 }

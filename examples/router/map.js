@@ -18,6 +18,15 @@ export default [
     }
   },
   {
+    path: '/components/loading',
+    meta: {
+      title: '加载'
+    },
+    component: (resolve) => {
+      require(['views/loading'], resolve)
+    }
+  },
+  {
     path: '/components/button',
     meta: {
       title: '按钮'
