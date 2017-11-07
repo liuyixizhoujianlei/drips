@@ -17,7 +17,7 @@
 </template>
 <script>
   import Relation from './components/relation/index.vue'
-  import Picker from 'vux/src/components/picker'
+  import Picker from '../../picker'
   import Popup from './index.vue'
 
   let years = []

@@ -34,6 +34,9 @@
     "url": "https://github.com/shuidi-fed/drips/issues"
   },
   "dependencies": {
+    "array-filter": "^1.0.0",
+    "array-find": "^1.0.0",
+    "array-map": "^0.0.0",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1",
     "vuex": "^2.3.1",
