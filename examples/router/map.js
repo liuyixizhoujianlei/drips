@@ -36,6 +36,15 @@ export default [
     }
   },
   {
+    path: '/components/swiper',
+    meta: {
+      title: 'swiper'
+    },
+    component: (resolve) => {
+      require(['views/swiper'], resolve)
+    }
+  },
+  {
     path: '/directives/transfer-dom',
     meta: {
       title: 'v-transfer-dom'
