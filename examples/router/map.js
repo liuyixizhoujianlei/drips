@@ -56,7 +56,7 @@ export default [
   {
     path: '/dialog',
     meta: {
-      title: '复选'
+      title: '对话框'
     },
     component: (resolve) => {
       require(['views/dialog'], resolve)
