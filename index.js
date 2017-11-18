@@ -3,6 +3,7 @@ import XDialog from './src/components/x-dialog'
 import SdButton from './src/components/button'
 import Preview from './src/components/preview'
 import CheckBox from './src/components/checkbox'
+import SdDialog from './src/components/dialog'
 
 
 // plugin
@@ -19,5 +20,6 @@ export {
   Rules,
   AlertPlugin,
   TransferDom,
-  CheckBox
+  CheckBox,
+  SdDialog
 }

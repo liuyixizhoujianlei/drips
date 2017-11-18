@@ -52,5 +52,14 @@ export default [
     component: (resolve) => {
       require(['views/checkbox'], resolve)
     }
+  },
+  {
+    path: '/dialog',
+    meta: {
+      title: '复选'
+    },
+    component: (resolve) => {
+      require(['views/dialog'], resolve)
+    }
   }
 ]
