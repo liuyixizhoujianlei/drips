@@ -45,6 +45,15 @@ export default [
     }
   },
   {
+    path: '/components/popup',
+    meta: {
+      title: 'popup'
+    },
+    component: (resolve) => {
+      require(['views/popup'], resolve)
+    }
+  },
+  {
     path: '/directives/transfer-dom',
     meta: {
       title: 'v-transfer-dom'
