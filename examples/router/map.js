@@ -70,5 +70,14 @@ export default [
     component: (resolve) => {
       require(['views/checkbox'], resolve)
     }
+  },
+  {
+    path: '/icomoon',
+    meta: {
+      title: 'icomoon'
+    },
+    component: (resolve) => {
+      require(['views/icomoonDemo'], resolve)
+    }
   }
 ]
