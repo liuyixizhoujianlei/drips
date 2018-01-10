@@ -1,0 +1,32 @@
+{
+  "name": "drip-css",
+  "version": "0.0.1",
+  "description": "drips css.",
+  "main": "lib/index.css",
+  "style": "lib/index.css",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "gulp build",
+    "build:icons": "gulp icon-font"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-iconfont": "^9.0.2",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sketch": "^1.0.5",
+    "md5-file": "^3.2.3",
+    "precss": "^2.0.0"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.8"
+  }
+}

@@ -1,0 +1,9 @@
+@import './common/var.css';
+
+.drip-row {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

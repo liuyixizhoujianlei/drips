@@ -1,0 +1,49 @@
+@keyframes drip-slide-bottom-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes drip-slide-bottom-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes drip-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drip-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.drip-fade {
+  &-enter-active {
+    animation: .3s drip-fade-in;
+  }
+
+  &-leave-active {
+    animation: .3s drip-fade-out;
+  }
+}
+
+.drip-slide-bottom {
+  &-enter-active {
+    animation: drip-slide-bottom-enter .3s both ease;
+  }
+
+  &-leave-active {
+    animation: drip-slide-bottom-leave .3s both ease;
+  }
+}
