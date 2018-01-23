@@ -1,6 +1,6 @@
 @import "../mixins/border-retina.css";
 
-.van-hairline {
+.drip-hairline {
   &,
   &--top,
   &--left,

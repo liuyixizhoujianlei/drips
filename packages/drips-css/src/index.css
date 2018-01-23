@@ -1,0 +1,13 @@
+/**
+ * Entry of all component's style
+ */
+
+/* base */
+@import './base.css';
+
+/* common components */
+@import './icon.css';
+@import './col.css';
+@import './row.css';
+@import './button.css';
+@import './loading.css';

@@ -6,6 +6,7 @@ const Components = require('./get-components')()
 const version = process.env.VERSION || require('../../package.json').version
 const tips = '// This file is auto gererated by build/bin/build-entry.js'
 
+// generate components entry
 function buildDripsEntry() {
   const uninstallComponents = [
 
@@ -48,4 +49,65 @@ export default {
   fs.writeFileSync(path.join(__dirname, '../../packages/index.js'), content)
 }
 
+// generate docs entry
+function buildDocsEntry() {
+  const dir = path.join(__dirname, '../../docs/markdown')
+  const cnDocs = fs.readdirSync(path.join(dir, 'zh-CN')).map(name => 'zh-CN/' + name)
+  const docs = [...cnDocs]
+    .filter(name => name.endsWith('.md'))
+    .map(name => {
+      name = name.replace(/\.md$/, '')
+      return `'${name}': wrapper(r => require.ensure([], () => r(require('./${name}.md')), '${name}'))`
+    })
+
+  const content = `${tips}
+import progress from 'nprogress'
+import 'nprogress/nprogress.css'
+
+function wrapper(component) {
+  return function(r) {
+    progress.start()
+    component(r).then(() => {
+      progress.done()
+    }).catch(() => {
+      progress.done()
+    })
+  }
+}
+
+export default {
+  ${docs.join(',\n  ')}
+}
+`
+  fs.writeFileSync(path.join(__dirname, '../../docs/markdown/index.js'), content)
+}
+
+// generate examples entry
+function buildExamplesEntry() {
+  const dir = path.join(__dirname, '../../docs/examples/views')
+  const examples = fs.readdirSync(dir)
+    .filter(name => name.endsWith('.vue'))
+    .map(name => {
+      name = name.replace(/\.vue$/, '')
+      return `'${name}': r => require.ensure([], () => r(wrapper(require('./views/${name}'), '${name}')), '${name}')`
+    })
+
+  const content = `${tips}
+import './common'
+
+function wrapper(component, name) {
+  component = component.default
+  component.name = 'demo-' + name
+  return component
+}
+
+export default {
+  ${examples.join(',\n  ')}
+}
+`
+  fs.writeFileSync(path.join(__dirname, '../../docs/examples/index.js'), content)
+}
+
 buildDripsEntry()
+buildDocsEntry()
+buildExamplesEntry()

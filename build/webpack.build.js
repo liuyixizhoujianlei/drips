@@ -1,13 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const isMinify = process.argv.indexOf('-p') !== -1
-const isProduction = process.env.NODE_ENV === 'production'
 const cache = {
   loader: 'cache-loader',
   options: {

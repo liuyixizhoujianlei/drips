@@ -106,7 +106,7 @@ gulp.task('icon-font', ['icon-font-ttf'], () => {
 
   // copy icon.css to src
   let source = fs.readFileSync(resolve('./icons/icon.css'), 'utf-8')
-  source = source.replace('drips-icon.ttf', `vant-icon-${hash}.ttf`)
+  source = source.replace('drips-icon.ttf', `drips-icon-${hash}.ttf`)
   fs.writeFileSync(resolve('./src/icon.css'), source)
 })
 
