@@ -27,6 +27,16 @@ npm i babel-plugin-import -D
 
 ```js
 import { Button } from 'drips'
+
+// 全局使用
+Vue.use(Button) 
+
+// 组件中使用
+export default {
+  components: {
+    [Button.name]: Button
+  }
+}
 ```
 
 #### 方式二. 按需引入组件

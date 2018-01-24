@@ -1,11 +1,19 @@
-## Loading 加载组件
+## Loading 加载
 
 ### 使用指南
 
 ```javascript
 import { Loading } from 'drips'
 
+// 全局使用
 Vue.use(Loading)
+
+// 组件内使用
+export default {
+  components: {
+    [Loading.name]: Loading
+  }
+}
 ```
 
 ### 代码演示
