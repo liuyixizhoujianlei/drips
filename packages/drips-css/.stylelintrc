@@ -1,0 +1,20 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "number-leading-zero": "never",
+    "color-hex-case": "lower",
+    "font-family-no-missing-generic-family-keyword": null,
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "include",
+        "mixin",
+        "define-mixin",
+        "each",
+        "content",
+        "else",
+        "if",
+        "for"
+      ]
+    }]
+  }
+}

@@ -1,5 +1,5 @@
 @define-mixin multi-ellipsis $lines {
-  overflow : hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: $lines;

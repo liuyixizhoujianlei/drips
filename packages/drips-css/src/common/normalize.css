@@ -10,6 +10,12 @@ a {
   text-decoration: none;
 }
 
+input,
+button,
+textarea {
+  font: inherit;
+}
+
 a,
 input,
 button,
@@ -24,10 +30,4 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-input,
-button,
-textarea {
-  font: inherit;
 }

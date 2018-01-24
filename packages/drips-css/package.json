@@ -24,7 +24,9 @@
     "gulp-postcss": "^7.0.1",
     "gulp-sketch": "^1.0.5",
     "md5-file": "^3.2.3",
-    "precss": "^2.0.0"
+    "precss": "^2.0.0",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0"
   },
   "dependencies": {
     "gulp-util": "^3.0.8"

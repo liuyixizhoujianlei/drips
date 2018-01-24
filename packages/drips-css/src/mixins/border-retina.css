@@ -2,7 +2,8 @@
 
 $border-poses: top, right, bottom, left;
 
-@define-mixin border-retina $poses: $border-poses, $border-retina-color: $gray-light {
+$define-mixin border-retina $poses: $border-poses,
+$border-retina-color: $gray-light {
   content: '';
   position: absolute;
   top: 0;

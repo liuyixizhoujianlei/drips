@@ -4,6 +4,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -33,7 +34,7 @@
     width: 100%;
     height: 100%;
     display: inline-block;
-    animation: drip-loading 0.8s linear infinite;
+    animation: drip-loading .8s linear infinite;
 
     &--circle {
       border-radius: 100%;
@@ -94,7 +95,7 @@
 
 @for $i from 1 to 12 {
   .drip-loading__spinner--spinner i:nth-of-type($i) {
-    opacity: calc(1 - (0.75 / 12) * ($i - 1));
+    opacity: calc(1 - (.75 / 12) * ($i - 1));
     transform: rotate(calc($i * 30deg));
   }
 }

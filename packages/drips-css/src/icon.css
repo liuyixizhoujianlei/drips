@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: normal;
   font-family: 'drips-icon';
-  src: url('./drips-icon-9a1eb2.ttf') format('truetype');
+  src: url('./drips-icon-ae77ab.ttf') format('truetype');
 }
 
 .drip-icon {
@@ -31,287 +31,380 @@
     font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
   }
 
-  &:before {
+  &::before {
     display: inline-block;
   }
 }
 
-.drip-icon-add-o:before {
+.drip-icon-add-o::before {
   content: "\F000";
 }
-.drip-icon-add:before {
+
+.drip-icon-add::before {
   content: "\F001";
 }
-.drip-icon-add2:before {
+
+.drip-icon-add2::before {
   content: "\F002";
 }
-.drip-icon-after-sale:before {
+
+.drip-icon-after-sale::before {
   content: "\F003";
 }
-.drip-icon-alipay:before {
+
+.drip-icon-alipay::before {
   content: "\F004";
 }
-.drip-icon-arrow-left:before {
+
+.drip-icon-arrow-left::before {
   content: "\F005";
 }
-.drip-icon-arrow:before {
+
+.drip-icon-arrow::before {
   content: "\F006";
 }
-.drip-icon-balance-details:before {
+
+.drip-icon-balance-details::before {
   content: "\F007";
 }
-.drip-icon-balance-pay:before {
+
+.drip-icon-balance-pay::before {
   content: "\F008";
 }
-.drip-icon-birthday-privilege:before {
+
+.drip-icon-birthday-privilege::before {
   content: "\F009";
 }
-.drip-icon-browsing-history:before {
+
+.drip-icon-browsing-history::before {
   content: "\F00A";
 }
-.drip-icon-card:before {
+
+.drip-icon-card::before {
   content: "\F00B";
 }
-.drip-icon-cart:before {
+
+.drip-icon-cart::before {
   content: "\F00C";
 }
-.drip-icon-cash-back-record:before {
+
+.drip-icon-cash-back-record::before {
   content: "\F00D";
 }
-.drip-icon-cash-on-deliver:before {
+
+.drip-icon-cash-on-deliver::before {
   content: "\F00E";
 }
-.drip-icon-certificate:before {
+
+.drip-icon-certificate::before {
   content: "\F00F";
 }
-.drip-icon-chat:before {
+
+.drip-icon-chat::before {
   content: "\F010";
 }
-.drip-icon-check:before {
+
+.drip-icon-check::before {
   content: "\F011";
 }
-.drip-icon-checked:before {
+
+.drip-icon-checked::before {
   content: "\F012";
 }
-.drip-icon-clear:before {
+
+.drip-icon-clear::before {
   content: "\F013";
 }
-.drip-icon-clock:before {
+
+.drip-icon-clock::before {
   content: "\F014";
 }
-.drip-icon-close:before {
+
+.drip-icon-close::before {
   content: "\F015";
 }
-.drip-icon-completed:before {
+
+.drip-icon-completed::before {
   content: "\F016";
 }
-.drip-icon-contact:before {
+
+.drip-icon-contact::before {
   content: "\F017";
 }
-.drip-icon-coupon:before {
+
+.drip-icon-coupon::before {
   content: "\F018";
 }
-.drip-icon-credit-pay:before {
+
+.drip-icon-credit-pay::before {
   content: "\F019";
 }
-.drip-icon-debit-pay:before {
+
+.drip-icon-debit-pay::before {
   content: "\F01A";
 }
-.drip-icon-delete:before {
+
+.drip-icon-delete::before {
   content: "\F01B";
 }
-.drip-icon-description:before {
+
+.drip-icon-description::before {
   content: "\F01C";
 }
-.drip-icon-discount:before {
+
+.drip-icon-discount::before {
   content: "\F01D";
 }
-.drip-icon-ecard-pay:before {
+
+.drip-icon-ecard-pay::before {
   content: "\F01E";
 }
-.drip-icon-edit-data:before {
+
+.drip-icon-edit-data::before {
   content: "\F01F";
 }
-.drip-icon-edit:before {
+
+.drip-icon-edit::before {
   content: "\F020";
 }
-.drip-icon-exchange-record:before {
+
+.drip-icon-exchange-record::before {
   content: "\F021";
 }
-.drip-icon-exchange:before {
+
+.drip-icon-exchange::before {
   content: "\F022";
 }
-.drip-icon-fail:before {
+
+.drip-icon-fail::before {
   content: "\F023";
 }
-.drip-icon-free-postage:before {
+
+.drip-icon-free-postage::before {
   content: "\F024";
 }
-.drip-icon-gift-card-pay:before {
+
+.drip-icon-gift-card-pay::before {
   content: "\F025";
 }
-.drip-icon-gift-card:before {
+
+.drip-icon-gift-card::before {
   content: "\F026";
 }
-.drip-icon-gift:before {
+
+.drip-icon-gift::before {
   content: "\F027";
 }
-.drip-icon-gold-coin:before {
+
+.drip-icon-gold-coin::before {
   content: "\F028";
 }
-.drip-icon-goods-collect:before {
+
+.drip-icon-goods-collect::before {
   content: "\F029";
 }
-.drip-icon-home:before {
+
+.drip-icon-home::before {
   content: "\F02A";
 }
-.drip-icon-hot-sale:before {
+
+.drip-icon-hot-sale::before {
   content: "\F02B";
 }
-.drip-icon-hot:before {
+
+.drip-icon-hot::before {
   content: "\F02C";
 }
-.drip-icon-like-o:before {
+
+.drip-icon-like-o::before {
   content: "\F02D";
 }
-.drip-icon-like:before {
+
+.drip-icon-like::before {
   content: "\F02E";
 }
-.drip-icon-location:before {
+
+.drip-icon-location::before {
   content: "\F02F";
 }
-.drip-icon-logistics:before {
+
+.drip-icon-logistics::before {
   content: "\F030";
 }
-.drip-icon-member-day-privilege:before {
+
+.drip-icon-member-day-privilege::before {
   content: "\F031";
 }
-.drip-icon-more-o:before {
+
+.drip-icon-more-o::before {
   content: "\F032";
 }
-.drip-icon-more:before {
+
+.drip-icon-more::before {
   content: "\F033";
 }
-.drip-icon-new-arrival:before {
+
+.drip-icon-new-arrival::before {
   content: "\F034";
 }
-.drip-icon-new:before {
+
+.drip-icon-new::before {
   content: "\F035";
 }
-.drip-icon-other-pay:before {
+
+.drip-icon-other-pay::before {
   content: "\F036";
 }
-.drip-icon-passed:before {
+
+.drip-icon-passed::before {
   content: "\F037";
 }
-.drip-icon-password-not-view:before {
+
+.drip-icon-password-not-view::before {
   content: "\F038";
 }
-.drip-icon-password-view:before {
+
+.drip-icon-password-view::before {
   content: "\F039";
 }
-.drip-icon-pause:before {
+
+.drip-icon-pause::before {
   content: "\F03A";
 }
-.drip-icon-peer-pay:before {
+
+.drip-icon-peer-pay::before {
   content: "\F03B";
 }
-.drip-icon-pending-deliver:before {
+
+.drip-icon-pending-deliver::before {
   content: "\F03C";
 }
-.drip-icon-pending-evaluate:before {
+
+.drip-icon-pending-evaluate::before {
   content: "\F03D";
 }
-.drip-icon-pending-orders:before {
+
+.drip-icon-pending-orders::before {
   content: "\F03E";
 }
-.drip-icon-pending-payment:before {
+
+.drip-icon-pending-payment::before {
   content: "\F03F";
 }
-.drip-icon-phone:before {
+
+.drip-icon-phone::before {
   content: "\F040";
 }
-.drip-icon-photo:before {
+
+.drip-icon-photo::before {
   content: "\F041";
 }
-.drip-icon-photograph:before {
+
+.drip-icon-photograph::before {
   content: "\F042";
 }
-.drip-icon-play:before {
+
+.drip-icon-play::before {
   content: "\F043";
 }
-.drip-icon-point-gift:before {
+
+.drip-icon-point-gift::before {
   content: "\F044";
 }
-.drip-icon-points-mall:before {
+
+.drip-icon-points-mall::before {
   content: "\F045";
 }
-.drip-icon-points:before {
+
+.drip-icon-points::before {
   content: "\F046";
 }
-.drip-icon-qr-invalid:before {
+
+.drip-icon-qr-invalid::before {
   content: "\F047";
 }
-.drip-icon-qr:before {
+
+.drip-icon-qr::before {
   content: "\F048";
 }
-.drip-icon-question:before {
+
+.drip-icon-question::before {
   content: "\F049";
 }
-.drip-icon-receive-gift:before {
+
+.drip-icon-receive-gift::before {
   content: "\F04A";
 }
-.drip-icon-records:before {
+
+.drip-icon-records::before {
   content: "\F04B";
 }
-.drip-icon-search:before {
+
+.drip-icon-search::before {
   content: "\F04C";
 }
-.drip-icon-send-gift:before {
+
+.drip-icon-send-gift::before {
   content: "\F04D";
 }
-.drip-icon-setting:before {
+
+.drip-icon-setting::before {
   content: "\F04E";
 }
-.drip-icon-share:before {
+
+.drip-icon-share::before {
   content: "\F04F";
 }
-.drip-icon-shop-collect:before {
+
+.drip-icon-shop-collect::before {
   content: "\F050";
 }
-.drip-icon-shop:before {
+
+.drip-icon-shop::before {
   content: "\F051";
 }
-.drip-icon-shopping-cart:before {
+
+.drip-icon-shopping-cart::before {
   content: "\F052";
 }
-.drip-icon-sign:before {
+
+.drip-icon-sign::before {
   content: "\F053";
 }
-.drip-icon-stop:before {
+
+.drip-icon-stop::before {
   content: "\F054";
 }
-.drip-icon-success:before {
+
+.drip-icon-success::before {
   content: "\F055";
 }
-.drip-icon-tosend:before {
+
+.drip-icon-tosend::before {
   content: "\F056";
 }
-.drip-icon-underway:before {
+
+.drip-icon-underway::before {
   content: "\F057";
 }
-.drip-icon-upgrade:before {
+
+.drip-icon-upgrade::before {
   content: "\F058";
 }
-.drip-icon-value-card:before {
+
+.drip-icon-value-card::before {
   content: "\F059";
 }
-.drip-icon-wap-home:before {
+
+.drip-icon-wap-home::before {
   content: "\F05A";
 }
-.drip-icon-wap-nav:before {
+
+.drip-icon-wap-nav::before {
   content: "\F05B";
 }
-.drip-icon-wechat:before {
+
+.drip-icon-wechat::before {
   content: "\F05C";
 }
+
