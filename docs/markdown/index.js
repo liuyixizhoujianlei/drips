@@ -2,11 +2,12 @@
 import progress from 'nprogress'
 import 'nprogress/nprogress.css'
 
-function wrapper(component) {
-  return function(r) {
+function wrapper(r) {
+  return (...args) => {
     progress.start()
-    component(r).then(() => {
+    return r.apply(args).then(component => {
       progress.done()
+      return component
     }).catch(() => {
       progress.done()
     })
@@ -14,6 +15,8 @@ function wrapper(component) {
 }
 
 export default {
-  'zh-CN/intro': wrapper(r => require.ensure([], () => r(require('./zh-CN/intro.md')), 'zh-CN/intro')),
-  'zh-CN/loading': wrapper(r => require.ensure([], () => r(require('./zh-CN/loading.md')), 'zh-CN/loading'))
+  'zh-CN/changelog': wrapper(() => import('./zh-CN/changelog.md')),
+  'zh-CN/intro': wrapper(() => import('./zh-CN/intro.md')),
+  'zh-CN/loading': wrapper(() => import('./zh-CN/loading.md')),
+  'zh-CN/quickstart': wrapper(() => import('./zh-CN/quickstart.md'))
 }

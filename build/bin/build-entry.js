@@ -57,18 +57,19 @@ function buildDocsEntry() {
     .filter(name => name.endsWith('.md'))
     .map(name => {
       name = name.replace(/\.md$/, '')
-      return `'${name}': wrapper(r => require.ensure([], () => r(require('./${name}.md')), '${name}'))`
+      return `'${name}': wrapper(() => import('./${name}.md'))`
     })
 
   const content = `${tips}
 import progress from 'nprogress'
 import 'nprogress/nprogress.css'
 
-function wrapper(component) {
-  return function(r) {
+function wrapper(r) {
+  return (...args) => {
     progress.start()
-    component(r).then(() => {
+    return r.apply(args).then(component => {
       progress.done()
+      return component
     }).catch(() => {
       progress.done()
     })
@@ -89,16 +90,20 @@ function buildExamplesEntry() {
     .filter(name => name.endsWith('.vue'))
     .map(name => {
       name = name.replace(/\.vue$/, '')
-      return `'${name}': r => require.ensure([], () => r(wrapper(require('./views/${name}'), '${name}')), '${name}')`
+      return `'${name}': wrapper(() => import('./views/${name}'), '${name}')`
     })
 
   const content = `${tips}
 import './common'
 
-function wrapper(component, name) {
-  component = component.default
-  component.name = 'demo-' + name
-  return component
+function wrapper(r, name) {
+  return (...args) => {
+    return r.apply(args).then(component => {
+      component = component.default
+      component.name = 'demo-' + name
+      return component
+    })
+  }
 }
 
 export default {

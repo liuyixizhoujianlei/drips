@@ -1,12 +1,16 @@
 // This file is auto gererated by build/bin/build-entry.js
 import './common'
 
-function wrapper(component, name) {
-  component = component.default
-  component.name = 'demo-' + name
-  return component
+function wrapper(r, name) {
+  return (...args) => {
+    return r.apply(args).then(component => {
+      component = component.default
+      component.name = 'demo-' + name
+      return component
+    })
+  }
 }
 
 export default {
-  'loading': r => require.ensure([], () => r(wrapper(require('./views/loading'), 'loading')), 'loading')
+  'loading': wrapper(() => import('./views/loading'), 'loading')
 }
