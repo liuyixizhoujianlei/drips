@@ -6,12 +6,12 @@
     class="drip-button"
     :class="[
       'drip-button--' + type,
-      'drip-button--' + size,
       {
-        'drip-button--disabled': disabled,
-        'drip-button--loading': loading,
-        'drip-button--block': block,
-        'drip-button--bottom-action': bottomAction
+        'is-disabled': disabled,
+        'is-loading': loading,
+        'is-normal': !block && !flat,
+        'is-block': block,
+        'is-flat': flat
       }
     ]"
     @click="onClick"
@@ -22,6 +22,7 @@
       type="circle"
       :color="type === 'default' ? 'black' : 'white'"
     />
+    <drip-icon v-if="icon" :name="icon"></drip-icon>
     <span class="drip-button__text">
       <slot />
     </span>
@@ -38,8 +39,9 @@ export default create({
     block: Boolean,
     loading: Boolean,
     disabled: Boolean,
+    icon: String,
     nativeType: String,
-    bottomAction: Boolean,
+    flat: Boolean,
     tag: {
       type: String,
       default: 'button'
@@ -47,10 +49,6 @@ export default create({
     type: {
       type: String,
       default: 'default'
-    },
-    size: {
-      type: String,
-      default: 'normal'
     }
   },
 
