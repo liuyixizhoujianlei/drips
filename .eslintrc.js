@@ -1,7 +1,24 @@
 module.exports = {
+  root: true,
+  parserOptions: {
+    parser: 'babel-eslint',
+    sourceType: 'module',
+    allowImportExportEverywhere: false
+  },
+
+  env: {
+    es6: true,
+    node: true,
+    mocha: true
+  },
+
   extends: [
     'standard',
     'plugin:vue/strongly-recommended'
+  ],
+
+  plugins: [
+    'vue'
   ],
 
   globals: {
@@ -26,3 +43,4 @@ module.exports = {
     }]
   }
 }
+
