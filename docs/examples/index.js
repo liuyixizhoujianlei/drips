@@ -12,5 +12,7 @@ function wrapper(r, name) {
 }
 
 export default {
+  'button': wrapper(() => import('./views/button'), 'button'),
+  'layout': wrapper(() => import('./views/layout'), 'layout'),
   'loading': wrapper(() => import('./views/loading'), 'loading')
 }

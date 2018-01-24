@@ -15,8 +15,10 @@ function wrapper(r) {
 }
 
 export default {
+  'zh-CN/button': wrapper(() => import('./zh-CN/button.md')),
   'zh-CN/changelog': wrapper(() => import('./zh-CN/changelog.md')),
   'zh-CN/intro': wrapper(() => import('./zh-CN/intro.md')),
+  'zh-CN/layout': wrapper(() => import('./zh-CN/layout.md')),
   'zh-CN/loading': wrapper(() => import('./zh-CN/loading.md')),
   'zh-CN/quickstart': wrapper(() => import('./zh-CN/quickstart.md'))
 }

@@ -40,6 +40,14 @@ module.exports = {
             groupName: '基础组件',
             list: [
               {
+                path: '/layout',
+                title: 'Layout - 布局'
+              },
+              {
+                path: '/button',
+                title: 'Button - 按钮'
+              },
+              {
                 path: '/loading',
                 title: 'Loading - 加载'
               }
