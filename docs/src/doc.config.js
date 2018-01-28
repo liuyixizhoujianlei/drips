@@ -50,6 +50,10 @@ module.exports = {
               {
                 path: '/loading',
                 title: 'Loading - 加载'
+              },
+              {
+                path: '/toast',
+                title: 'Toast - 轻提示'
               }
             ]
           }
