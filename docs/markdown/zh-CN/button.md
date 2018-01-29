@@ -38,8 +38,6 @@ export default {
 #### 加载状态
 
 ```html
-<drip-button loading />
-<drip-button loading type="primary" />
 <drip-button loading>加载中</drip-button>
 ```
 

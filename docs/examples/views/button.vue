@@ -12,8 +12,6 @@
     </demo-block>
 
     <demo-block title="加载状态">
-      <drip-button loading />
-      <drip-button loading type="primary" />
       <drip-button loading>加载中</drip-button>
     </demo-block>
 
@@ -41,16 +39,18 @@
 </template>
 
 <style lang="postcss">
-.drip-demo-block {
-  padding: 0 15px;
+.demo-button {
+  .drip-demo-block {
+    padding: 0 15px;
+  }
 
   .is-normal {
-    margin: 0 0 10px 10px;
+    margin: 0 10px 10px 0;
     vertical-align: top;
   }
-}
 
-.drip-demo-block__title {
-  padding-left: 0;
+  .drip-demo-block__title {
+    padding-left: 0;
+  }
 }
 </style>

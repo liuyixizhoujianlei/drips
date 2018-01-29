@@ -29,12 +29,8 @@
 
 <style lang="postcss">
 .demo-layout {
-  .drip-doc-demo-block {
+  .drip-demo-block {
     padding: 0 15px;
-  }
-
-  .drip-doc-demo-block__title {
-    padding-left: 0;
   }
 
   .drip-col {
