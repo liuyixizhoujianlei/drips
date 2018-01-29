@@ -12,3 +12,6 @@
 @import './button.css';
 @import './loading.css';
 @import './toast.css';
+
+/* 交互弹层 */
+@import './dialog.css';

@@ -54,6 +54,10 @@ module.exports = {
               {
                 path: '/toast',
                 title: 'Toast - 轻提示'
+              },
+              {
+                path: '/dialog',
+                title: 'Dialog - 弹出层'
               }
             ]
           }

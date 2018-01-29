@@ -3,6 +3,7 @@ import Button from './button'
 import Col from './col'
 import Icon from './icon'
 import Loading from './loading'
+import Dialog from './dialog'
 import Row from './row'
 import Toast from './toast'
 
@@ -12,6 +13,7 @@ const components = [
   Col,
   Icon,
   Loading,
+  Dialog,
   Row,
   Toast
 ]
@@ -33,6 +35,7 @@ export {
   Col,
   Icon,
   Loading,
+  Dialog,
   Row,
   Toast
 }

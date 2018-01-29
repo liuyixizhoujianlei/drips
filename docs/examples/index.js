@@ -15,5 +15,6 @@ export default {
   'button': wrapper(() => import('./views/button'), 'button'),
   'layout': wrapper(() => import('./views/layout'), 'layout'),
   'loading': wrapper(() => import('./views/loading'), 'loading'),
+  'dialog': wrapper(() => import('./views/dialog'), 'dialog'),
   'toast': wrapper(() => import('./views/toast'), 'toast')
 }
