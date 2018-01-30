@@ -17,10 +17,11 @@ function wrapper(r) {
 export default {
   'zh-CN/button': wrapper(() => import('./zh-CN/button.md')),
   'zh-CN/changelog': wrapper(() => import('./zh-CN/changelog.md')),
+  'zh-CN/confirm': wrapper(() => import('./zh-CN/confirm.md')),
+  'zh-CN/dialog': wrapper(() => import('./zh-CN/dialog.md')),
   'zh-CN/intro': wrapper(() => import('./zh-CN/intro.md')),
   'zh-CN/layout': wrapper(() => import('./zh-CN/layout.md')),
   'zh-CN/loading': wrapper(() => import('./zh-CN/loading.md')),
-  'zh-CN/dialog': wrapper(() => import('./zh-CN/dialog.md')),
   'zh-CN/quickstart': wrapper(() => import('./zh-CN/quickstart.md')),
   'zh-CN/toast': wrapper(() => import('./zh-CN/toast.md'))
 }

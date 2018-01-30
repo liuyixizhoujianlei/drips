@@ -1,0 +1,73 @@
+@import './common/var.css';
+
+.drip-confirm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  font-size: 16px;
+  overflow: hidden;
+  transition: .2s;
+  border-radius: 4px;
+  background-color: $white;
+  transform: translate3d(-50%, -50%, 0);
+
+  &__header {
+    padding: 15px 0 0;
+    text-align: center;
+  }
+
+  &__content {
+    padding: 15px 20px;
+
+    &::after {
+      border-bottom-width: 1px;
+    }
+  }
+
+  &__message {
+    line-height: 1.5;
+
+    &--withtitle {
+      color: $gray-dark;
+      font-size: 14px;
+    }
+  }
+
+  .drip-button {
+    border: 0;
+  }
+
+  &__footer {
+    overflow: hidden;
+
+    &.is-twobtn {
+      display: flex;
+
+      .drip-button {
+        flex: 1;
+      }
+    }
+
+    &.is-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__confirm {
+    &,
+    &:active {
+      color: $orange;
+    }
+  }
+
+  &-bounce-enter {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(.7);
+  }
+
+  &-bounce-leave-active {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(.9);
+  }
+}

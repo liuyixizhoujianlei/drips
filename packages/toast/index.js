@@ -22,7 +22,6 @@ const createInstance = () => {
     instance = new ToastConstructor({
       el: document.createElement('div')
     })
-    window.instance = instance
     document.body.appendChild(instance.$el)
   }
 }

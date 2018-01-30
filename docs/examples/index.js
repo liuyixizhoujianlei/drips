@@ -13,8 +13,9 @@ function wrapper(r, name) {
 
 export default {
   'button': wrapper(() => import('./views/button'), 'button'),
+  'confirm': wrapper(() => import('./views/confirm'), 'confirm'),
+  'dialog': wrapper(() => import('./views/dialog'), 'dialog'),
   'layout': wrapper(() => import('./views/layout'), 'layout'),
   'loading': wrapper(() => import('./views/loading'), 'loading'),
-  'dialog': wrapper(() => import('./views/dialog'), 'dialog'),
   'toast': wrapper(() => import('./views/toast'), 'toast')
 }

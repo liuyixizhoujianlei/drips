@@ -140,5 +140,9 @@ export default {
 
   beforeDestroy() {
     this.doAfterClose()
+  },
+
+  deactivated() {
+    this.doAfterClose()
   }
 }

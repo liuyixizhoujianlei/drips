@@ -58,6 +58,10 @@ module.exports = {
               {
                 path: '/dialog',
                 title: 'Dialog - 弹出层'
+              },
+              {
+                path: '/confirm',
+                title: 'Confirm - 弹出框'
               }
             ]
           }
