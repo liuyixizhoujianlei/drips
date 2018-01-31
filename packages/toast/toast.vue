@@ -50,6 +50,17 @@ export default create({
     displayStyle() {
       return DEFAULT_STYLE_LIST.indexOf(this.type) !== -1 ? 'default' : this.type
     }
+  },
+
+  mounted() {
+    this.handleState = () => {
+      this.clear()
+    }
+    window.addEventListener('popstate', this.handleState)
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('popstate', this.handleState)
   }
 })
 </script>

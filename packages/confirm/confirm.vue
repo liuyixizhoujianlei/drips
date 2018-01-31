@@ -84,6 +84,17 @@ export default create({
     }
   },
 
+  mounted() {
+    this.handleState = () => {
+      this.close()
+    }
+    window.addEventListener('popstate', this.handleState)
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('popstate', this.handleState)
+  },
+
   methods: {
     handleAction(action) {
       this.$emit('input', false)
