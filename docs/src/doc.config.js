@@ -62,6 +62,10 @@ module.exports = {
               {
                 path: '/confirm',
                 title: 'Confirm - 弹出框'
+              },
+              {
+                path: '/payment-picker',
+                title: 'PaymentPicker - 价格选择'
               }
             ]
           }

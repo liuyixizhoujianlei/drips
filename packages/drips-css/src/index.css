@@ -16,3 +16,7 @@
 /* 交互弹层 */
 @import './dialog.css';
 @import './confirm.css';
+
+/* 表单类 */
+@import './payment-picker.css';
+

@@ -7500,9 +7500,9 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-easy-doc@1.2.2:
-  version "1.2.2"
-  resolved "http://registry.npm.shuidihuzhu.com/vue-easy-doc/download/vue-easy-doc-1.2.2.tgz#72dc0d401ca0edfe034f07f86908618e90f99f2c"
+vue-easy-doc@1.2.3:
+  version "1.2.3"
+  resolved "http://registry.npm.shuidihuzhu.com/vue-easy-doc/download/vue-easy-doc-1.2.3.tgz#2be194db5b93edd3d2874c1d6aec377f740f13d1"
 
 vue-eslint-parser@^2.0.1:
   version "2.0.2"

@@ -5,6 +5,7 @@ import Confirm from './confirm'
 import Dialog from './dialog'
 import Icon from './icon'
 import Loading from './loading'
+import PaymentPicker from './payment-picker'
 import Row from './row'
 import Toast from './toast'
 
@@ -16,6 +17,7 @@ const components = [
   Dialog,
   Icon,
   Loading,
+  PaymentPicker,
   Row,
   Toast
 ]
@@ -39,6 +41,7 @@ export {
   Dialog,
   Icon,
   Loading,
+  PaymentPicker,
   Row,
   Toast
 }

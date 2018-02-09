@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Drips from 'packages'
 import 'packages/drips-css/src/index.css'
+
 import App from './WapApp'
 import routes from './router.config'
 import isMobile from './utils/is-mobile'

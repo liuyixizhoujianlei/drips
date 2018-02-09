@@ -22,6 +22,7 @@ export default {
   'zh-CN/intro': wrapper(() => import('./zh-CN/intro.md')),
   'zh-CN/layout': wrapper(() => import('./zh-CN/layout.md')),
   'zh-CN/loading': wrapper(() => import('./zh-CN/loading.md')),
+  'zh-CN/payment-picker': wrapper(() => import('./zh-CN/payment-picker.md')),
   'zh-CN/quickstart': wrapper(() => import('./zh-CN/quickstart.md')),
   'zh-CN/toast': wrapper(() => import('./zh-CN/toast.md'))
 }

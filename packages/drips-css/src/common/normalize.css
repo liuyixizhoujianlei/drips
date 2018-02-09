@@ -20,6 +20,11 @@ a,
 input,
 button,
 textarea {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
   &:focus {
     outline: none;
   }
@@ -31,3 +36,4 @@ ul {
   padding: 0;
   list-style: none;
 }
+

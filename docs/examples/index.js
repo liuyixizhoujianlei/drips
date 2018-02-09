@@ -17,5 +17,6 @@ export default {
   'dialog': wrapper(() => import('./views/dialog'), 'dialog'),
   'layout': wrapper(() => import('./views/layout'), 'layout'),
   'loading': wrapper(() => import('./views/loading'), 'loading'),
+  'payment-picker': wrapper(() => import('./views/payment-picker'), 'payment-picker'),
   'toast': wrapper(() => import('./views/toast'), 'toast')
 }
