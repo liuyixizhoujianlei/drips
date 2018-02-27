@@ -36,7 +36,7 @@
     "vue": ">= 2.5.0"
   },
   "devDependencies": {
-    "@sd/vue-sfc-compiler": "^1.0.0",
+    "@sd/vue-sfc-compiler": "^1.1.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
