@@ -15,37 +15,37 @@ const shell = require('shelljs')
 // 1. lint
 log('Starting', 'lint')
 shell.exec('npm run lint --silent')
-log('Finished', 'lint')
+log('Finished', 'lint', 'green')
 
 // 2. build entry
 log('Starting', 'build:entry')
 shell.exec('npm run build:entry --silent')
-log('Finished', 'build:entry')
+log('Finished', 'build:entry', 'green')
 
 // 3. build [component].js
 log('Starting', 'build:components')
 shell.exec('npm run build:components --silent')
-log('Finished', 'build:components')
+log('Finished', 'build:components', 'green')
 
 // 4. build drips-css
 log('Starting', 'build:drips-css')
 shell.exec('npm run build:drips-css --silent')
-log('Finished', 'build:drips-css')
+log('Finished', 'build:drips-css', 'green')
 
 // 5. build drips.js
 log('Starting', 'build:drips')
 shell.exec('npm run build:drips --silent')
-log('Finished', 'build:drips')
+log('Finished', 'build:drips', 'green')
 
 // 6. build style entry
 log('Starting', 'build:style-entry')
 shell.exec('npm run build:style-entry --silent')
-log('Finished', 'build:style-entry')
+log('Finished', 'build:style-entry', 'green')
 
-function log(status, action, breakLine) {
+function log(status, action, color = 'gray') {
   const now = new Date()
-  const clock = `${breakLine ? '\n' : ''}[${padZero(now.getHours())}:${padZero(now.getMinutes())}:${padZero(now.getSeconds())}]`
-  console.log(`${chalk.gray(clock)} ${status} '${action ? chalk.cyan.bold(action) : ''}'`)
+  const clock = `[${padZero(now.getHours())}:${padZero(now.getMinutes())}:${padZero(now.getSeconds())}]`
+  console.log(`${chalk[color](clock)} ${status} '${action ? chalk.cyan.bold(action) : ''}'`)
 }
 
 function padZero(n) {

@@ -43,8 +43,6 @@ export default {
 </script>
 
 <style lang="postcss">
-@import '../../../packages/drips-css/src/common/var.css';
-
 .side-nav {
   position: relative;
   padding: 60px 15px 20px;

@@ -22,7 +22,7 @@
       type="circle"
       :color="type === 'default' ? 'black' : 'white'"
     />
-    <drip-icon v-if="icon" :name="icon"></drip-icon>
+    <drip-icon v-if="icon" :name="icon" />
     <span class="drip-button__text">
       <slot />
     </span>

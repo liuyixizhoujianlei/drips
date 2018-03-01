@@ -29,7 +29,7 @@ compile(libDir, ['drips-css', '.DS_Store'])
 function compile(dir, excludes = []) {
   const files = fs.readdirSync(dir)
 
-  files.forEach(file => {
+  files.forEach(async file => {
     const absolutePath = path.resolve(dir, file)
 
     // remove drips-css
@@ -48,8 +48,8 @@ function compile(dir, excludes = []) {
       const outputVuePath = absolutePath + '.js'
       const outputJsPath = absolutePath.replace('.vue', '.js')
       const outputPath = fs.existsSync(outputJsPath) ? outputVuePath : outputJsPath
-
-      fs.outputFileSync(outputPath, compiler(source, compilerOption).js)
+      const compiledContent = await compiler(source, compilerOption)
+      fs.outputFileSync(outputPath, compiledContent.js)
     } else
     // compile .js file
     if (/\.js$/.test(file)) {

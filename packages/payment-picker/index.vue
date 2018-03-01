@@ -3,7 +3,7 @@
     <ul class="drip-payment-picker__list">
       <li v-for="(amount, i) in amountList" :key="i" class="drip-payment-picker__list-item">
         <span class="payment-picker-cell" :class="{selected: selectedIndex === i}" @click="pick(i)">
-          <em class="payment-amount">{{amount}}</em>{{unit}}
+          <em class="payment-amount">{{ amount }}</em>{{ unit }}
         </span>
       </li>
     </ul>
@@ -16,7 +16,7 @@
         @blur="inputBlur"
         @change="inputChange"
       >
-      <span class="amount-unit">{{unit}}</span>
+      <span class="amount-unit">{{ unit }}</span>
     </label>
   </div>
 </template>
@@ -118,4 +118,3 @@ export default create({
   }
 })
 </script>
-

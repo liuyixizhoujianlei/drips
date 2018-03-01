@@ -54,9 +54,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@sd/vue-sfc-compiler@^1.0.0":
-  version "1.0.0"
-  resolved "http://registry.npm.shuidihuzhu.com/@sd/vue-sfc-compiler/download/@sd/vue-sfc-compiler-1.0.0.tgz#8a916aed5f398ceb4badcd6bb4bd3f7af41e925a"
+"@sd/vue-sfc-compiler@^1.1.0":
+  version "1.1.0"
+  resolved "http://registry.npm.shuidihuzhu.com/@sd/vue-sfc-compiler/download/@sd/vue-sfc-compiler-1.1.0.tgz#b54f1cc425563a88750d9dd3b6188f3b71bf5c66"
   dependencies:
     babel-polyfill "^6.26.0"
 
