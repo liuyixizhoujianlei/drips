@@ -3,7 +3,7 @@ const webpackConfig = require('./webpack.test.conf')
 
 module.exports = (config) => {
   config.set({
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
     frameworks: ['mocha', 'sinon-chai'],
     reporters: ['spec', 'coverage-istanbul'],
     files: ['./index.js'],

@@ -25,7 +25,9 @@ module.exports = {
     FileReader: true,
     File: true,
     location: true,
-    localStorage: true
+    localStorage: true,
+    expect: true,
+    sinon: true
   },
 
   rules: {
@@ -34,6 +36,7 @@ module.exports = {
     'vue/name-property-casing': ['error', 'kebab-case'],
     'vue/no-unused-vars': 0,
     'vue/require-v-for-key': 0,
+    'no-unused-expressions': 0,
     'vue/max-attributes-per-line': [2, {
       "singleline": 5,
       "multiline": {
