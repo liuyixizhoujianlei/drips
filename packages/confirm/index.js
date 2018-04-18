@@ -60,7 +60,9 @@ Confirm.alert = (options = {}) => {
 }
 
 Confirm.close = () => {
-  instance.value = false
+  if (instance) {
+    instance.value = false
+  }
 }
 
 Confirm.install = Vue => {
