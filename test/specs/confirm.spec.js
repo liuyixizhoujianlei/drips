@@ -1,3 +1,4 @@
+import { createLocalVue } from '@vue/test-utils'
 import Confirm from 'packages/confirm'
 
 describe('confirm', () => {
@@ -48,5 +49,13 @@ describe('confirm', () => {
       expect(document.querySelector('.drip-confirm')).to.exist
       document.querySelector('.drip-confirm__cancel').click()
     }, 300)
+  })
+
+  it('register component', () => {
+    const localVue = createLocalVue()
+    localVue.use(Confirm)
+
+    expect(localVue.Confirm).to.exist
+    expect(localVue.prototype.$confirm).to.exist
   })
 })

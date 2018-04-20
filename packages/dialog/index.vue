@@ -21,7 +21,7 @@ export default create({
       type: Boolean,
       default: true
     },
-    lockScroll: {
+    lockOnScroll: {
       type: Boolean,
       default: false
     },
