@@ -41,10 +41,10 @@ describe('dialog', () => {
     const eventStub = sinon.stub(wrapper.vm, '$emit')
     expect(wrapper.element.style.display).to.equal('none')
 
-    wrapper.vm.value = true
+    wrapper.setProps({ value: true })
     wrapper.vm.$nextTick(() => {
       expect(wrapper.element.style.display).to.equal('')
-      expect(eventStub.calledWith('input'))
+      expect(eventStub.calledWith('input')).to.be.true
       done()
     })
   })
@@ -69,7 +69,7 @@ describe('dialog', () => {
 
     // v-model
     wrapper.vm.$on('input', val => {
-      wrapper.vm.value = val
+      wrapper.setProps({ value: val })
     })
 
     expect(wrapper.classes()).to.include('drip-dialog')
@@ -106,7 +106,7 @@ describe('dialog', () => {
       triggerTouch(document, 'touchmove', 0, -30)
 
       expect(wrapper.element.style.display).to.equal('')
-      wrapper.vm.value = false
+      wrapper.setProps({ value: false })
 
       setTimeout(() => {
         expect(wrapper.element.style.display).to.equal('none')
