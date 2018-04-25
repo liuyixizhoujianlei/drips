@@ -78,18 +78,20 @@ export default create({
   watch: {
     value: {
       handler() {
-        if (!this.showOtherAmount) {
-          if (this.selectedIndex === -1) {
-            this.$emit('input', this.amountList[this.defaultIndex])
+        this.$nextTick(() => {
+          if (!this.showOtherAmount) {
+            if (this.selectedIndex === -1) {
+              this.$emit('input', this.amountList[this.defaultIndex])
+            }
+            return
           }
-          return
-        }
 
-        if (~this.selectedIndex) {
-          this.otherAmount = ''
-        } else {
-          this.otherAmount = this.value
-        }
+          if (~this.selectedIndex) {
+            this.otherAmount = ''
+          } else {
+            this.otherAmount = this.value
+          }
+        })
       },
       immediate: true
     }
