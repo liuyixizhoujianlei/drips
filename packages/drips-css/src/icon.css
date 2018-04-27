@@ -15,7 +15,7 @@
   text-rendering: auto;
 
   &__info {
-    color: #fff;
+    color: $icon-info-color;
     left: 50%;
     top: -.5em;
     font-size: .5em;
@@ -27,7 +27,7 @@
     position: absolute;
     border-radius: .6em;
     box-sizing: border-box;
-    background-color: $red;
+    background-color: $icon-info-background-color;
     font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
   }
 

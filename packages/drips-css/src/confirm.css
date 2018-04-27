@@ -9,7 +9,7 @@
   overflow: hidden;
   transition: .2s;
   border-radius: 4px;
-  background-color: $white;
+  background-color: $confirm-background-color;
   transform: translate3d(-50%, -50%, 0);
 
   &__header {
@@ -29,7 +29,7 @@
     line-height: 1.5;
 
     &--withtitle {
-      color: $gray-dark;
+      color: $confirm-message-withtitle-color;
       font-size: 14px;
     }
   }
@@ -57,7 +57,7 @@
   &__confirm {
     &,
     &:active {
-      color: $orange;
+      color: $confirm-confirm-button-color;
     }
   }
 

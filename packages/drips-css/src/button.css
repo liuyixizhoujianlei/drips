@@ -21,8 +21,8 @@
     width: 100%;
     height: 100%;
     border: inherit;
-    border-color: $black;
-    background-color: $black;
+    border-color: $button-shade-color;
+    background-color: $button-shade-color;
     border-radius: inherit;
     transform: translate(-50%, -50%);
   }

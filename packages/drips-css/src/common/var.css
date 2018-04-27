@@ -1,35 +1,70 @@
-/* color variables */
-$black: #000;
-$white: #fff;
-$red: #f44;
-$blue: #38f;
-$orange: #ffba00;
-$green: #06bf04;
-$gray: #c9c9c9;
-$gray-light: #e5e5e5;
-$gray-darker: #666;
-$gray-dark: #999;
+/* Drips Style Variables */
 
-/* default colors */
-$text-color: #333;
-$border-color: #ccc;
-$active-color: #e8e8e8;
-$background-color: #f8f8f8;
+/* Colors */
+$black: #000 !default;
+$white: #fff !default;
+$red: #f44 !default;
+$blue: #38f !default;
+$orange: #ffba00 !default;
+$green: #06bf04 !default;
+$gray: #c9c9c9 !default;
+$gray-light: #e5e5e5 !default;
+$gray-darker: #666 !default;
+$gray-dark: #999 !default;
 
-/* button */
-$button-default-color: $text-color;
-$button-default-background-color: $white;
-$button-default-border-color: $gray-light;
-$button-primary-color: $white;
-$button-primary-background-color: $orange;
-$button-primary-border-color: $orange;
-$button-plain-color: $text-color;
-$button-plain-background-color: #f0f0f0;
-$button-plain-border-color: #f0f0f0;
-$button-disabled-color: $gray-dark;
-$button-disabled-background-color: $gray-light;
-$button-disabled-border-color: $border-color;
-$button-bottom-action-default-color: $white;
-$button-bottom-action-default-background-color: #f85;
-$button-bottom-action-primary-color: $white;
-$button-bottom-action-primary-background-color: $red;
+/* Default colors */
+$text-color: #333 !default;
+$border-color: #ccc !default;
+$active-color: #e8e8e8 !default;
+$background-color: #f8f8f8 !default;
+
+/* Button */
+$button-shade-color: $black !default;
+$button-disabled-shade-color: $black !default;
+
+$button-default-color: $text-color !default;
+$button-default-background-color: $white !default;
+$button-default-border-color: $gray-light !default;
+
+$button-primary-color: $white !default;
+$button-primary-background-color: $orange !default;
+$button-primary-border-color: $orange !default;
+
+$button-plain-color: $text-color !default;
+$button-plain-background-color: #f0f0f0 !default;
+$button-plain-border-color: #f0f0f0 !default;
+
+/* Confirm */
+$confirm-background-color: $white !default;
+$confirm-message-withtitle-color: $gray-dark !default;
+$confirm-confirm-button-color: $orange !default;
+
+/* Dialog */
+$dialog-background-color: $white !default;
+$dialog-modal-background-color: rgba(0, 0, 0, .7) !default;
+
+/* Icon */
+$icon-info-color: $white !default;
+$icon-info-background-color: $red !default;
+
+/* Loading */
+$loading-circle-size: 16px !default;
+$loading-gradient-circle-size: 30px !default;
+$loading-spinner-size: 30px !default;
+
+/* PaymentPicker */
+$payment-picker-text-color: #333 !default;
+$payment-picker-cell-border-color: #e3e3e3 !default;
+$payment-picker-cell-active-border-color: #ffba00 !default;
+$payment-picker-cell-background-color: #fff !default;
+$payment-picker-cell-amount-text-color: #ffba00 !default;
+$payment-picker-other-amount-text-color: #333 !default;
+$payment-picker-other-amount-background-color: #fff !default;
+$payment-picker-other-amount-border-color: #e4e4e4 !default;
+
+/* Toast */
+$toast-z-index: 3001 !default;
+$toast-text-color: $white !default;
+$toast-background-color: rgba(39, 39, 39, .7) !default;
+$toast-mask-background-color: rgba(0, 0, 0, .5) !default;
+

@@ -17,15 +17,19 @@
   z-index: 0;
 
   &--circle {
-    width: 16px;
-    height: 16px;
+    width: $loading-circle-size;
+    height: $loading-circle-size;
     vertical-align: middle;
   }
 
-  &--gradient-circle,
+  &--gradient-circle {
+    width: $loading-gradient-circle-size;
+    height: $loading-gradient-circle-size;
+  }
+
   &--spinner {
-    width: 30px;
-    height: 30px;
+    width: $loading-spinner-size;
+    height: $loading-spinner-size;
   }
 
   &__spinner {
