@@ -8,7 +8,7 @@ import { Confirm } from 'drips'
 // 全局使用，推荐
 Vue.use(Confirm)
 
-// 以上引用后会在Vue上挂载Confirm方法，在 Vue 的 prototype 上挂载 $confirm 方法
+// 以上引用后会在Vue上挂载 Confirm 和 Alert 方法，在 Vue 的 prototype 上挂载 $confirm 和 $alert 方法
 ```
 
 ### 代码演示

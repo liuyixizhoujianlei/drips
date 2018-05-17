@@ -57,5 +57,7 @@ describe('confirm', () => {
 
     expect(localVue.Confirm).to.exist
     expect(localVue.prototype.$confirm).to.exist
+    expect(localVue.Alert).to.exist
+    expect(localVue.prototype.$alert).to.exist
   })
 })

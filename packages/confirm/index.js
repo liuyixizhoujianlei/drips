@@ -67,6 +67,7 @@ Confirm.close = () => {
 
 Confirm.install = Vue => {
   Vue.Confirm = Vue.prototype.$confirm = Confirm
+  Vue.Alert = Vue.prototype.$alert = Confirm.alert
 }
 
 export default Confirm
